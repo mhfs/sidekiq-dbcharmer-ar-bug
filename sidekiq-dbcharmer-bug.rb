@@ -9,16 +9,6 @@ ActiveRecord::Base.configurations = YAML::load(IO.read('./database.yml'))
 ActiveRecord::Base.establish_connection 'development'
 
 ##
-# Setup Sidekiq Redis connection
-Sidekiq.configure_server do |config|
-  config.redis = { :url => 'redis://127.0.0.1:16379/7' }
-end
-
-Sidekiq.configure_client do |config|
-  config.redis = { :url => 'redis://127.0.0.1:16379/7' }
-end
-
-##
 # Create empty user table and model
 class CreateUserSchema < ActiveRecord::Migration
   def change
