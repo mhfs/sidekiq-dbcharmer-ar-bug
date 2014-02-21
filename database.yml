@@ -1,0 +1,33 @@
+development:
+  adapter: mysql2
+  host: localhost
+  database: dbcharmer
+  username: root
+  password:
+  pool: 25
+  timeout: 5000
+
+  slave1:
+    adapter: mysql2
+    host: localhost
+    database: dbcharmer_s1
+    username: root
+    password:
+    pool: 25
+    timeout: 5000
+  slave2:
+    adapter: mysql2
+    host: localhost
+    database: dbcharmer_s2
+    username: root
+    password:
+    pool: 25
+    timeout: 5000
+  slave3:
+    adapter: mysql2
+    host: localhost
+    database: dbcharmer_s3
+    username: root
+    password:
+    pool: 25
+    timeout: 5000
